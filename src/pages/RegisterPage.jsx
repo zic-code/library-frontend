@@ -27,7 +27,7 @@ function RegisterPage() {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const res = await axios.post(`${ BASE_URL }/auth/register`, formData)
+      const res = await axios.post(`${ BASE_URL }`, formData)
       login(res.data.token)
       alert("registered successfully 🎉")
 
