@@ -26,6 +26,7 @@ function RegisterPage() {
 
   const handleSubmit = async e => {
     e.preventDefault()
+    console.log("BASE_URL= ",BASE_URL )
     try {
       const res = await axios.post(`${ BASE_URL }/auth/register`, formData)
       login(res.data.token)
