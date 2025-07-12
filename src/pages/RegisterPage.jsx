@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext"
-
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -27,7 +27,7 @@ function RegisterPage() {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const res = await axios.post("http://localhost:5000/auth/register", formData)
+      const res = await axios.post(BASE_URL, formData)
       login(res.data.token)
       alert("registered successfully 🎉")
 

@@ -5,6 +5,8 @@ import axios from "axios";
 import BASE_URL from "../config";
 import { Container, Row, Col, Card, ProgressBar, Badge } from "react-bootstrap";
 import "./MyBooksPage.css";
+const SEARCH_BASE_URL = import.meta.env.VITE_SEARCH_BASE_URL;
+
 
 function MyBooksPage() {
   const { token } = useContext(AuthContext);
@@ -26,7 +28,7 @@ function MyBooksPage() {
 
         const detailed = await Promise.all(
           userBooks.map(async (b) => {
-            const r = await axios.get(`https://www.googleapis.com/books/v1/volumes/${b.book_id}`);
+            const r = await axios.get(`${SEARCH_BASE_URL}/${b.book_id}`);
             return {
               ...b,
               volumeInfo: r.data.volumeInfo

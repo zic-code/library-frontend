@@ -12,7 +12,7 @@ import {
   Badge,
 } from "react-bootstrap";
 import StarRating from "../components/StarRating";
-
+const SEARCH_BASE_URL = import.meta.env.VITE_SEARCH_BASE_URL;
 
 
 
@@ -44,7 +44,7 @@ function BookDetailPage() {
   async function fetchDetails() {
     try {
       const bookRes = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes/${book_id}`
+        `${SEARCH_BASE_URL}/${book_id}`
       );
       setBookInfo(bookRes.data.volumeInfo);
       setTotalPages(bookRes.data.volumeInfo.pageCount)

@@ -10,6 +10,8 @@ import {
   Card,
 } from "react-bootstrap";
 import { useNavigate, useSearchParams } from "react-router-dom";
+const SEARCH_BASE_URL = import.meta.env.VITE_SEARCH_BASE_URL;
+
 
 function SearchPage() {
   const [query, setQuery] = useState("");
@@ -29,7 +31,7 @@ function SearchPage() {
 
   async function searchBooks(keyword) {
     try {
-      const res = await axios.get("https://www.googleapis.com/books/v1/volumes", {
+      const res = await axios.get(SEARCH_BASE_URL, {
         params: {
           q: keyword,
           maxResults: 12,
@@ -49,10 +51,7 @@ function SearchPage() {
     if (!query.trim()) return;
     try {
       setSearchParams({ query });
-
-      const resultBooks = res.data.items || [];
-      setBooks(resultBooks);
-      setError(null);
+      await searchBooks(query); 
     } catch (err) {
       console.error("error while searching", err
       )
