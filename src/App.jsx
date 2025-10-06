@@ -6,6 +6,9 @@ import MyBooksPage from "./pages/MyBooksPage"
 import MyBookDetailPage from "./pages/MyBookDetailPage"
 import BookDetailPage from "./pages/BookDetailPage"
 import SearchPage from "./pages/SearchPage"
+import HomePage from "./pages/HomePage" 
+import Practice from "./pages/Practice"
+
 import './App.css'
 
 
@@ -15,6 +18,9 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        
+        <Route path="/" element={<HomePage />} />
+        <Route path="/practice" element={<Practice/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/mybooks" element={<MyBooksPage />} />

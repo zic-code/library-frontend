@@ -37,6 +37,7 @@ function SearchPage() {
           maxResults: 12,
         }
       });
+
       const resultBooks = res.data.items || [];
       setBooks(resultBooks);
       setError(null);

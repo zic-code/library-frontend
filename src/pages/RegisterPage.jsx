@@ -2,7 +2,10 @@ import { useState, useContext, useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext"
+import { Form, Button, Container, Card } from "react-bootstrap";
+
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -41,15 +44,54 @@ function RegisterPage() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Sign up</h2>
-      <input name="username" type="text" placeholder="username" value={formData.username} onChange={handleChange} />
-      <input name="password" type="password" placeholder="password" value={formData.password} onChange={handleChange} />
-      <input name="email" placeholder="e-mail" value={formData.email} onChange={handleChange} />
-      <button type="submit">Sign up!</button>
-    </form>
-  )
+    <Container className="mt-5 d-flex justify-content-center">
+      <Card style={{ width: "22rem" }} className="p-4 shadow">
+        <h3 className="text-center mb-3">Sign up.</h3>
+        <Form onSubmit={handleSubmit}>
+          
+          <Form.Group className="mb-3">
+            <Form.Label>Username</Form.Label>
+            <Form.Control
+              name="username"
+              placeholder="Enter your username"
+              value={formData.username}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              name="email"
+              type="email"
+              placeholder="Enter your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>          
+
+          <Button variant="primary" type="submit" className="w-100">
+            Login
+          </Button>
+        </Form>
+      </Card>
+    </Container>
+  );
 }
 
-//for dummy
+
 export default RegisterPage
