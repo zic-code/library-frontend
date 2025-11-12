@@ -1,12 +1,49 @@
-# React + Vite
+# 📚 Library Tracker App
+**Full-Stack Web Application — React + Flask + PostgreSQL**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that allows users to search books, track reading progress, and write reviews.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+This project was created because **I wanted a personal platform to store the books I read, track my progress, and record my thoughts/reviews.**  
+It demonstrates full-stack capabilities, including REST API development, frontend integration, authentication, and deployment.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Features
+
+- 🔐 User authentication (JWT)
+- 🔎 Search and store books
+- 📊 Track reading progress
+- ✍️ Add / edit / delete reviews
+- ☁️ Deployed frontend & backend (Render)
+
+---
+
+## 🛠 Tech Stack
+
+| Category      | Technologies |
+|----------------|--------------|
+| Frontend       | React, JavaScript, Axios, React Router, Bootstrap |
+| Backend        | Python, Flask, SQLAlchemy |
+| Database       | PostgreSQL |
+| Authentication | JWT + bcrypt |
+| Deployment     | Render |
+| Tools          | Git / GitHub, Insomnia / Postman |
+
+---
+
+
+## ▶️ Live Demo
+
+🔗 https://library-frontend-pv9u.onrender.com
+
+---
+
+## 🔗 Backend Repo
+
+👉 https://github.com/zic-code/library-backend
+
+---
