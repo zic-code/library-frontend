@@ -27,11 +27,11 @@ It demonstrates full-stack capabilities, including REST API development, fronten
 | Category      | Technologies |
 |----------------|--------------|
 | Frontend       | React, JavaScript, Axios, React Router, Bootstrap |
-| Backend        | Python, Flask, SQLAlchemy |
+| Backend        | Node.js, Express.js |
 | Database       | PostgreSQL |
 | Authentication | JWT + bcrypt |
 | Deployment     | Render |
-| Tools          | Git / GitHub, Insomnia / Postman |
+| Tools          | Git / GitHub, Insomnia|
 
 ---
 ## demo
@@ -49,4 +49,5 @@ It demonstrates full-stack capabilities, including REST API development, fronten
 👉 https://github.com/zic-code/library-backend
 
 ---
+
 
