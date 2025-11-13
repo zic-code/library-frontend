@@ -34,6 +34,8 @@ It demonstrates full-stack capabilities, including REST API development, fronten
 | Tools          | Git / GitHub, Insomnia / Postman |
 
 ---
+## demo
+![demo](https://github.com/user-attachments/assets/10e438e5-a1dd-4f9b-ad53-0e76df4ac138)
 
 
 ## ▶️ Live Demo
@@ -47,3 +49,4 @@ It demonstrates full-stack capabilities, including REST API development, fronten
 👉 https://github.com/zic-code/library-backend
 
 ---
+
