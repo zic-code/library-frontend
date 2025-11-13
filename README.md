@@ -1,5 +1,5 @@
 # 📚 Library Tracker App
-**Full-Stack Web Application — React + Flask + PostgreSQL**
+**Full-Stack Web Application — React + Node.js + PostgreSQL**
 
 A web application that allows users to search books, track reading progress, and write reviews.
 
@@ -49,5 +49,6 @@ It demonstrates full-stack capabilities, including REST API development, fronten
 👉 https://github.com/zic-code/library-backend
 
 ---
+
 
 
